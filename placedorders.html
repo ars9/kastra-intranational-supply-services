@@ -13,7 +13,7 @@
         // Assuming data.json contains an array of orders
         $.each(data.orders, function(i, order) {
             let { orderId, customerName, orderDetails, status } = order;
-            $('#order-list').append('<li>' + orderId + customerName + orderDetails + status + '</li>');
+            $('#order-list').append('<tr><td>${orderId}</td><td>${customerName}</td><td>${orderDetails}</td><td>${status}</td></tr>);
             // Add more order details as needed
         });
     });
