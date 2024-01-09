@@ -13,7 +13,9 @@
         // Assuming data.json contains an array of orders
         $.each(data.orders, function(i, order) {
             let { orderId, customerName, orderDetails, status } = order;
-            $('#order-list').append(`<thead>
+            $('#order-list').append(`<div class="table-wrapper">
+			                            <table>
+			                            <thead>
 										<tr>
 										 <th>Order ID</th>
 										 <th>Customer Name</th>
@@ -27,7 +29,9 @@
 										  <tr>
 										  <td colspan="2"></td>
 										  </tr>
-										 </tfoot>`);
+										 </tfoot>
+										 </table>
+										 </div>`);
         });
     });
 });
