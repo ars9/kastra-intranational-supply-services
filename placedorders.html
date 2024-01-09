@@ -9,14 +9,16 @@
         <!-- Additional script to fetch and display orders -->
         <script>
             $(document).ready(function() {
-                $.getJSON('data.json', function(data) {
-                    // Assuming data.json contains an array of orders
-                    $.each(data.orders, function(i, order) {
-                        $('#order-list').append('<li>' + orderId + customerName + orderDetails + status + '</li>');
-                        // Add more order details as needed
-                    });
-                });
-            });
+    $.getJSON('data.json', function(data) {
+        // Assuming data.json contains an array of orders
+        $.each(data.orders, function(i, order) {
+            let { orderId, customerName, orderDetails, status } = order;
+            $('#order-list').append('<li>' + orderId + customerName + orderDetails + status + '</li>');
+            // Add more order details as needed
+        });
+    });
+});
+
         </script>
     </head>
     <body class="is-preload">
