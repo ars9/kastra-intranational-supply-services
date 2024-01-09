@@ -12,7 +12,7 @@
                 $.getJSON('data.json', function(data) {
                     // Assuming data.json contains an array of orders
                     $.each(data.orders, function(i, order) {
-                        $('#order-list').append('<li>' + order.name + ' - ' + order.details + '</li>');
+                        $('#order-list').append('<li>' + orderId + customerName + orderDetails + status + '</li>');
                         // Add more order details as needed
                     });
                 });
@@ -45,7 +45,7 @@
 
                         <p>Below is the list of all placed orders.</p>
                         <hr class="major" />
-
+						
                         <!-- Order List -->
                         <ul id="order-list">
                             <!-- Orders will be loaded here by jQuery -->
