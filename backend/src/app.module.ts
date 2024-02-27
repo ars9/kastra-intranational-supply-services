@@ -7,7 +7,7 @@ import { OrderController } from './order/order.controller';
 import { OrderSchema } from './schema/order.schema';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27107',{dbName: 'orderdb'}),
+  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27107/',{dbName: 'orderdb'}),
   MongooseModule.forFeature([{ name: 'Order', schema: OrderSchema }])],
   controllers: [AppController, OrderController],
   providers: [AppService, OrderService],
